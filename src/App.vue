@@ -1,27 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<el-container>
+    <el-main>
+      <TodoList msg="Another to-do-list made with Vue and Nest"/>
+    </el-main>
+  </el-container>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+import TodoList from './components/TodoList.vue';
 
 @Options({
   components: {
-    HelloWorld,
+    TodoList,
   },
 })
 export default class App extends Vue {}
 </script>
 
 <style>
+body {
+  margin: 0;
+}
+.el-container{
+  background-color: #e9eef3;
+  color: var(--el-tet-color-primary);
+  text-align: center;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
